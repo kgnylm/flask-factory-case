@@ -39,29 +39,29 @@ DELETE /factories/<factory_id>: Delete user's related factory
 
 ### Entities
 
-GET /entities: Get a list of entities user's related factory with pagination.
-POST /entities: Create a new entity of in user's related factory.
-PUT /entities/<entity_id>: Update a specific entity from user's related factory.
-DELETE /entities/<entity_id>: Delete a specific entity from user's related factory.
+GET /entities: Get a list of entities user's related factory with pagination.  
+POST /entities: Create a new entity of in user's related factory.  
+PUT /entities/<entity_id>: Update a specific entity from user's related factory.  
+DELETE /entities/<entity_id>: Delete a specific entity from user's related factory.  
 
 ### Admin
 
-POST /admin/factories: Create a new factory. (Admin only).
-GET /admin/factories: Get all factories. (Admin only).
-GET /admin/factories/<factory_id>: Get details of a specific factory. (Admin only).
-PUT /admin/factories/<factory_id>: Update a specific factory. (Admin only).
-DELETE /admin/factories/<factory_id>: Delete a specific factory. (Admin only).
+POST /admin/factories: Create a new factory. (Admin only).  
+GET /admin/factories: Get all factories. (Admin only).  
+GET /admin/factories/<factory_id>: Get details of a specific factory. (Admin only).  
+PUT /admin/factories/<factory_id>: Update a specific factory. (Admin only).  
+DELETE /admin/factories/<factory_id>: Delete a specific factory. (Admin only).  
 
-POST /admin/entities: Create a new entity. (Admin only).
-GET /admin/entities: Get all entities with pagination (Admin only).
-GET /admin/entities/<entitiy_id>: Get a specific entity. (Admin only).
-PUT /admin/entities/<entitiy_id>: Update a specific entity. (Admin only).
-DELETE /admin/entities/<entitiy_id>: Delete a specific entity. (Admin only).
+POST /admin/entities: Create a new entity. (Admin only).  
+GET /admin/entities: Get all entities with pagination (Admin only).  
+GET /admin/entities/<entitiy_id>: Get a specific entity. (Admin only).  
+PUT /admin/entities/<entitiy_id>: Update a specific entity. (Admin only).  
+DELETE /admin/entities/<entitiy_id>: Delete a specific entity. (Admin only).  
 
-GET /admin/users: Get all users with pagination (Admin only).
-GET /admin/users/<user_id>: Get a specific user (Admin only).
-PUT /admin/users/<user_id>: Update a specific user (Admin only).
-DELETE /admin/users/<user_id>: Delete a specific user (Admin only).
+GET /admin/users: Get all users with pagination (Admin only).  
+GET /admin/users/<user_id>: Get a specific user (Admin only).  
+PUT /admin/users/<user_id>: Update a specific user (Admin only).  
+DELETE /admin/users/<user_id>: Delete a specific user (Admin only).  
 
 ### Pagination
 
