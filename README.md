@@ -24,8 +24,6 @@ This is a Flask application using MongoDB for data storage. The application impl
    python/python3 app.py
 
 ### .env file
-
-SECRET_KEY=your-secret-key  
  JWT_SECRET_KEY=jwt-secret-key  
  MONGO_URI=mongodb://localhost:27017/case
 
