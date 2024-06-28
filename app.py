@@ -1,9 +1,7 @@
 from flask import Flask
 from flask_pymongo import PyMongo
 from flask_jwt_extended import JWTManager
-from config import Config
 from dotenv import load_dotenv
-from pymongo import MongoClient
 import os
 
 load_dotenv()
@@ -20,10 +18,12 @@ def create_app():
     from routes.auth import bp as auth_bp
     from routes.factory import bp as factory_bp
     from routes.entity import bp as entity_bp
+    from routes.admin import bp as admin_bp
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(factory_bp)
     app.register_blueprint(entity_bp)
+    app.register_blueprint(admin_bp)
 
     return app
 
