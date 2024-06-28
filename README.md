@@ -17,10 +17,10 @@ This is a Flask application using MongoDB for data storage. The application impl
 
    ```
 
-2. Install the required packages
+2. Install the required packages  
    pip install -r requirements.txt
 
-3. Run the application
+3. Run the application  
    python3 app.py
 
 ## Routes
