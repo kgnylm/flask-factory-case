@@ -27,9 +27,9 @@ This is a Flask application using MongoDB for data storage. The application impl
 
 ### Authentication and Authorization
 
-POST /register: Register a new user.
-POST /adminregister: Register a new admin user.
-POST /login: Authenticate a user and get a JWT token.
+POST /register: Register a new user.  
+POST /adminregister: Register a new admin user.  
+POST /login: Authenticate a user and get a JWT token.  
 
 ### Factories
 
