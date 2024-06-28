@@ -33,9 +33,9 @@ POST /login: Authenticate a user and get a JWT token.
 
 ### Factories
 
-GET /factories: Get a active user's factory
-PUT /factories/<factory_id>: Update user's related factory
-DELETE /factories/<factory_id>: Delete user's related factory
+GET /factories: Get a active user's factory  
+PUT /factories/<factory_id>: Update user's related factory  
+DELETE /factories/<factory_id>: Delete user's related factory  
 
 ### Entities
 
