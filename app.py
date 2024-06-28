@@ -4,13 +4,16 @@ from flask_jwt_extended import JWTManager
 from dotenv import load_dotenv
 import os
 
+# Load environment variables from .env file
 load_dotenv()
 
 app = Flask(__name__)
 
+# Configure MongoDB and JWT using environment variables
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
 
+# Initialize PyMongo and JWTManager
 mongo = PyMongo(app)
 jwt = JWTManager(app)
 
