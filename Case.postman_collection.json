@@ -1,0 +1,1035 @@
+{
+	"info": {
+		"_postman_id": "4f17efb5-3aad-4fa8-9c14-ec2efc254b02",
+		"name": "Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25661568"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/auth/adminregister",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"adminregister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Factory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU1OTYzNSwianRpIjoiM2I0NDE4YTktYTBhYy00NzA0LTllYzAtN2EyMDM3M2Q1ZjExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTU5NjM1LCJjc3JmIjoiMTMzYmFkZWEtNzg1NS00Yzg3LTljMTAtNDgwODI1NmZmYmE1IiwiZXhwIjoxNzE5NTYwNTM1fQ.BvSJGuJ3MLpksWnT2k5Blpp6gBlXlwJjkG9Udg4e5s8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Factory 52\",\n    \"location\":\"Kilis\",\n    \"capacity\":13000\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/factories",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"factories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Factories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU3ODU1MCwianRpIjoiM2ViM2FiYmQtYWZjNS00ZmU1LThlN2QtNmY0MmE3OGM0ZDZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTc4NTUwLCJjc3JmIjoiZWRiNjIzYWMtMzgwMi00NGUxLWE0YjQtYTM3ZjVkZjhjOTc2IiwiZXhwIjo1OTE5NTc4NTUwfQ.855CY6VCQUNZsrTWgRofppqeFIEbE7TMEEeHMtEAvpo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/factories?page=1&per_page=4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"factories"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Factory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU1OTYzNSwianRpIjoiM2I0NDE4YTktYTBhYy00NzA0LTllYzAtN2EyMDM3M2Q1ZjExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTU5NjM1LCJjc3JmIjoiMTMzYmFkZWEtNzg1NS00Yzg3LTljMTAtNDgwODI1NmZmYmE1IiwiZXhwIjoxNzE5NTYwNTM1fQ.BvSJGuJ3MLpksWnT2k5Blpp6gBlXlwJjkG9Udg4e5s8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/factories/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"factories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667da3d96bd27d25ee1ab973"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Factory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU1OTYzNSwianRpIjoiM2I0NDE4YTktYTBhYy00NzA0LTllYzAtN2EyMDM3M2Q1ZjExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTU5NjM1LCJjc3JmIjoiMTMzYmFkZWEtNzg1NS00Yzg3LTljMTAtNDgwODI1NmZmYmE1IiwiZXhwIjoxNzE5NTYwNTM1fQ.BvSJGuJ3MLpksWnT2k5Blpp6gBlXlwJjkG9Udg4e5s8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"capacity\":100000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/factories/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"factories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667da3d96bd27d25ee1ab973"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Factory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2MDY1NCwianRpIjoiMTI0MWQxODktMTRmMi00ZDE1LWFlYTctNDJjNGU5Mzg1M2E5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTYwNjU0LCJjc3JmIjoiYTI5YjE3MzQtYjMzYi00ZGRjLWI5ZDUtZGIzMjlkMzUzNDRhIiwiZXhwIjoxNzE5NTYxNTU0fQ.yLhAVsp5JFcF6vXnwJ5BOjPwjhsPP3PxOFBMSAxHqv8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/factories/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"factories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667da3d96bd27d25ee1ab973"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2MDY1NCwianRpIjoiMTI0MWQxODktMTRmMi00ZDE1LWFlYTctNDJjNGU5Mzg1M2E5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTYwNjU0LCJjc3JmIjoiYTI5YjE3MzQtYjMzYi00ZGRjLWI5ZDUtZGIzMjlkMzUzNDRhIiwiZXhwIjoxNzE5NTYxNTU0fQ.yLhAVsp5JFcF6vXnwJ5BOjPwjhsPP3PxOFBMSAxHqv8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Entity 45\",\n    \"factory_id\": \"667da59904170a99e6777878\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/entities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"entities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Entities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU3ODU1MCwianRpIjoiM2ViM2FiYmQtYWZjNS00ZmU1LThlN2QtNmY0MmE3OGM0ZDZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTc4NTUwLCJjc3JmIjoiZWRiNjIzYWMtMzgwMi00NGUxLWE0YjQtYTM3ZjVkZjhjOTc2IiwiZXhwIjo1OTE5NTc4NTUwfQ.855CY6VCQUNZsrTWgRofppqeFIEbE7TMEEeHMtEAvpo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/entities?page=1&per_page=4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"entities"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2MTU2MiwianRpIjoiMTY2NDI5OTMtOGRkYS00YTc1LTg4ZGQtMWQzNWFhYjFiMzhhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTYxNTYyLCJjc3JmIjoiMjNkZDMyNjUtM2E0ZS00ZjhkLTk0ZWItZDgzNWE4YmU3MmViIiwiZXhwIjoxNzE5NTYyNDYyfQ.amP0VvWBb0xdjpQb1Kmts9GIGXE3cVaVDeN4E9rUlbI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/entities/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"entities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667da7bccbd5fd70c89d4fd2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU3ODU1MCwianRpIjoiM2ViM2FiYmQtYWZjNS00ZmU1LThlN2QtNmY0MmE3OGM0ZDZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTc4NTUwLCJjc3JmIjoiZWRiNjIzYWMtMzgwMi00NGUxLWE0YjQtYTM3ZjVkZjhjOTc2IiwiZXhwIjo1OTE5NTc4NTUwfQ.855CY6VCQUNZsrTWgRofppqeFIEbE7TMEEeHMtEAvpo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/users?page=1&per_page=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2MjQ2OSwianRpIjoiMDI3ODAxMjQtYzVhNi00YmMzLWIwYjctMmQwNzlhOTc1MWQwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTYyNDY5LCJjc3JmIjoiNjBhNWU3ZDctMmM2Ny00MjdhLThjYmMtMWNkNGY3NzNkZjQ0IiwiZXhwIjo1OTE5NTYyNDY5fQ.qIAwGMUfVOcwDAQ5-wdT29ACw9BhOiMYvebtPoYQE0I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/users/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667e712875358a1ccec2c035"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NTU1NCwianRpIjoiOTg1ODkxYTctM2IzNS00YzJiLTkyOWYtNTMyM2JhZmUxMWZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTY1NTU0LCJjc3JmIjoiNjVhN2ZkYzEtYzMxMy00YjcwLTkzN2UtNGU3NzQ4M2EwZjI1IiwiZXhwIjo1OTE5NTY1NTU0fQ.27-PheNgF5fPe8aOxpNXrSMckeJdvf5s-RG53WPYlOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"factory_id\":\"667e65979b88f900336d9efe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/users/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667e712875358a1ccec2c035"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NzM3OSwianRpIjoiMTkwMjA2NDUtYTRjZi00NGE3LWIyOTUtNjQxOGQ1NzJhNTg5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTY3Mzc5LCJjc3JmIjoiMGY3ZGUxMzMtNjNlYi00MjcwLThlMmYtN2VlNTFiNTIyNDY3IiwiZXhwIjo1OTE5NTY3Mzc5fQ.ggxHlkI1LFlaIe9cKOAizaiM74ACEVGbbvacsN5gviI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/users/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667e63b6ff009480b17a46c9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NzM3OSwianRpIjoiMTkwMjA2NDUtYTRjZi00NGE3LWIyOTUtNjQxOGQ1NzJhNTg5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTY3Mzc5LCJjc3JmIjoiMGY3ZGUxMzMtNjNlYi00MjcwLThlMmYtN2VlNTFiNTIyNDY3IiwiZXhwIjo1OTE5NTY3Mzc5fQ.ggxHlkI1LFlaIe9cKOAizaiM74ACEVGbbvacsN5gviI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Motor 42\",\n    \"factory_id\":\"667da5a204170a99e6777879\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/entities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"entities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NzM3OSwianRpIjoiMTkwMjA2NDUtYTRjZi00NGE3LWIyOTUtNjQxOGQ1NzJhNTg5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTY3Mzc5LCJjc3JmIjoiMGY3ZGUxMzMtNjNlYi00MjcwLThlMmYtN2VlNTFiNTIyNDY3IiwiZXhwIjo1OTE5NTY3Mzc5fQ.ggxHlkI1LFlaIe9cKOAizaiM74ACEVGbbvacsN5gviI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Motor 97\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/entities/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"entities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667da7b6cbd5fd70c89d4fd0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NzM3OSwianRpIjoiMTkwMjA2NDUtYTRjZi00NGE3LWIyOTUtNjQxOGQ1NzJhNTg5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzE5NTY3Mzc5LCJjc3JmIjoiMGY3ZGUxMzMtNjNlYi00MjcwLThlMmYtN2VlNTFiNTIyNDY3IiwiZXhwIjo1OTE5NTY3Mzc5fQ.ggxHlkI1LFlaIe9cKOAizaiM74ACEVGbbvacsN5gviI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/admin/entities/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"entities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667da7b6cbd5fd70c89d4fd0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user1\",\n    \"password\":\"12345\",\n    \"factory_id\":\"667da3d96bd27d25ee1ab973\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Authorized Factory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NTAwMiwianRpIjoiYTQyOTE4ZGUtZDc4MC00NmY1LWJmYzItYWE4MzY4MDE4NzUwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIyIiwibmJmIjoxNzE5NTY1MDAyLCJjc3JmIjoiMzliMjA5N2QtZWQyYS00NDVkLWFkZWQtNTgzZDc1NWUyYTAwIiwiZXhwIjo1OTE5NTY1MDAyfQ.H2gA_qxaD8WwAtpHbqDgLPgxDEi6WIr72m8c3tH8f_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/factories/667da59904170a99e6777879",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"factories",
+						"667da59904170a99e6777879"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Authorized Factory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NjgwMSwianRpIjoiMGNmMzBhODItOGZlYy00ZWUwLTk1YjEtMWM4Y2ZkZTU0OWUyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIyIiwibmJmIjoxNzE5NTY2ODAxLCJjc3JmIjoiNTY1M2NmMzItNDFjZC00MDc4LWJlNTEtNDgwNTlkZjQ3OTRkIiwiZXhwIjo1OTE5NTY2ODAxfQ.d6Ym5IPxd5IILp4XRKSZE1VqFabgxXCmWw716zdqF-s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"location\":\"Paris\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/factories/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"factories",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "667da59904170a99e6777878"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Authorized Factory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2NjgwMSwianRpIjoiMGNmMzBhODItOGZlYy00ZWUwLTk1YjEtMWM4Y2ZkZTU0OWUyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIyIiwibmJmIjoxNzE5NTY2ODAxLCJjc3JmIjoiNTY1M2NmMzItNDFjZC00MDc4LWJlNTEtNDgwNTlkZjQ3OTRkIiwiZXhwIjo1OTE5NTY2ODAxfQ.d6Ym5IPxd5IILp4XRKSZE1VqFabgxXCmWw716zdqF-s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/factories/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"factories",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "667da59904170a99e6777878"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Entity for Authorized Factory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2Nzg2MSwianRpIjoiNGM4NDk1ZGEtNGNlNC00ZGQzLTk3ZjUtNmQwMDI2YTUzYjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIyIiwibmJmIjoxNzE5NTY3ODYxLCJjc3JmIjoiZmQzMzBkNDMtZjY1Zi00M2IwLWE2YTQtOWVlMzhhZWJhOGNmIiwiZXhwIjo1OTE5NTY3ODYxfQ.I58F8S7YFF18XMOLz4vkq0eTxpJmU8ikHwYH55e2zUw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"deneme\",\n    \"factory_id\":\"667da5a204170a99e6777879\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/entities/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Entities for Authorized Factory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2Nzg2MSwianRpIjoiNGM4NDk1ZGEtNGNlNC00ZGQzLTk3ZjUtNmQwMDI2YTUzYjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIyIiwibmJmIjoxNzE5NTY3ODYxLCJjc3JmIjoiZmQzMzBkNDMtZjY1Zi00M2IwLWE2YTQtOWVlMzhhZWJhOGNmIiwiZXhwIjo1OTE5NTY3ODYxfQ.I58F8S7YFF18XMOLz4vkq0eTxpJmU8ikHwYH55e2zUw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/entities/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Entity for Authorized Factory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2Nzg2MSwianRpIjoiNGM4NDk1ZGEtNGNlNC00ZGQzLTk3ZjUtNmQwMDI2YTUzYjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIyIiwibmJmIjoxNzE5NTY3ODYxLCJjc3JmIjoiZmQzMzBkNDMtZjY1Zi00M2IwLWE2YTQtOWVlMzhhZWJhOGNmIiwiZXhwIjo1OTE5NTY3ODYxfQ.I58F8S7YFF18XMOLz4vkq0eTxpJmU8ikHwYH55e2zUw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Motor 200\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/entities/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"entities",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "667da7b9cbd5fd70c89d4fd1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Entity for Authorized Factory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxOTU2Nzg2MSwianRpIjoiNGM4NDk1ZGEtNGNlNC00ZGQzLTk3ZjUtNmQwMDI2YTUzYjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIyIiwibmJmIjoxNzE5NTY3ODYxLCJjc3JmIjoiZmQzMzBkNDMtZjY1Zi00M2IwLWE2YTQtOWVlMzhhZWJhOGNmIiwiZXhwIjo1OTE5NTY3ODYxfQ.I58F8S7YFF18XMOLz4vkq0eTxpJmU8ikHwYH55e2zUw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/entities/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"entities",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "667da7b9cbd5fd70c89d4fd1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
