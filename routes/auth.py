@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta
 from app import mongo
 from models.user import User
+from bson import ObjectId
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
